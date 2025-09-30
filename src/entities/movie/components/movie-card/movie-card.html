@@ -1,0 +1,23 @@
+@let _movie = movie();
+
+<div tuiCardLarge tuiAppearance="floating" class="movie-card-container">
+  <h1 tuiHeader>
+    {{ _movie.title }}
+  </h1>
+
+  <picture>
+    <img src="assets/poster.jpg" />
+  </picture>
+
+  <!-- <section class="poster">Постер</section>
+  <section class="movie-info">
+    <span tuiSubtitle>{{ _movie.year }}</span>
+    <br />
+    <span tuiSubtitle>{{ _movie.country }}</span>
+  </section> -->
+  <footer class="movie-card-footer">
+    <button appearance="secondary" size="m" tuiButton type="button">
+      <tui-icon icon="@tui.move-diagonal"></tui-icon>
+    </button>
+  </footer>
+</div>

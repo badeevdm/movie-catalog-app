@@ -1,0 +1,17 @@
+<section class="title-container">
+  <h1 class="title">Поиск</h1>
+  <span class="sub-title"></span>
+</section>
+<section class="search-container">
+  <tui-textfield
+    iconStart="@tui.search"
+    class="search-container__search-query"
+    tuiTextfieldSize="l"
+  >
+    <input placeholder="Введите название фильма" tuiTextfield [(ngModel)]="search" />
+  </tui-textfield>
+  <tui-textfield tuiChevron class="search-container__category" tuiTextfieldSize="l">
+    <input placeholder="Категории" tuiSelect [(ngModel)]="category" />
+    <tui-data-list-wrapper *tuiTextfieldDropdown new [items]="['1', '2']" />
+  </tui-textfield>
+</section>

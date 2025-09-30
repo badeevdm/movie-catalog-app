@@ -1,0 +1,8 @@
+<movie-app-header />
+<movie-app-movies-filter />
+
+<section class="movies-list">
+  @for (movie of movies; track $index) {
+  <movie-app-movie-card class="movie-item" [movie]="movie" />
+  }
+</section>

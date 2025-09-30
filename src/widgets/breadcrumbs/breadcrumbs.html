@@ -1,0 +1,5 @@
+<tui-breadcrumbs>
+  @for (item of path(); track $index) {
+  <a *tuiItem tuiLink [routerLink]="item.link"> {{ item.name }} </a>
+  }
+</tui-breadcrumbs>

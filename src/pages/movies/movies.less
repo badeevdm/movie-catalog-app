@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  background: var(--page-background-color);
+}
+
+.movies-list {
+  width: 1024px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .movie-item {
+    flex: 0 1 calc(25% - 15px);
+    min-height: 300px;
+    box-sizing: border-box;
+  }
+}
