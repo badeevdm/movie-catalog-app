@@ -1,1 +1,2 @@
-export { Header } from './header';
+export { Header } from './ui';
+export { HideOnScrollDirective } from './lib';

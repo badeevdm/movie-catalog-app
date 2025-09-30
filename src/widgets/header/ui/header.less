@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  &__search-query {
+    width: 0;
+    opacity: 0;
+    transform: translateX(8px);
+    transition: width 0.25s ease;
+    height: 32px;
+  }
+
+  &__search-query_visible {
+    width: 300px;
+    opacity: 1;
+  }
+}
