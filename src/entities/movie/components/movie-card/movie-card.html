@@ -9,6 +9,10 @@
 
   <div class="movie-card__overlay">
     <h3 class="movie-card__title" [title]="_movie.title">{{ _movie.title }}</h3>
-    <p class="movie-card__meta">{{ _movie.year }} • {{ _movie.country }}</p>
+    <p class="movie-card__meta">
+      <span class="movie-year">{{ _movie.year }}</span>
+      <br />
+      <span class="movie-country">{{ _movie.country }}</span>
+    </p>
   </div>
 </div>

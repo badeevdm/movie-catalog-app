@@ -12,10 +12,8 @@ export class Movies {
   public readonly movies: IMovie[] = [
     {
       id: '1',
-      title:
-        'AngularAngularAngularAngularAngularAngularAngularAngularAngularAngularAngularAngularAngular',
-      description:
-        'Angular DescDescDescDescDescDescDescDescDescDescDescDescDescDescDescDescDescDescDescDescDescDescDescDesc',
+      title: 'Angular',
+      description: 'Angular',
       year: 2025,
       country: 'USA',
       image: '',

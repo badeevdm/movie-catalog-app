@@ -5,7 +5,7 @@ import {
   provideZonelessChangeDetection,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { routes } from '../../../pages';
+import { routes } from '../../../app';
 
 export const appConfig: ApplicationConfig = {
   providers: [

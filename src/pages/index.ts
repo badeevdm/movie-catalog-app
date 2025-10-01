@@ -1,1 +1,1 @@
-export { routes } from './app.routes';
+export * from './movies';
