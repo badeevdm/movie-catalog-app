@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { IMovie } from '../../models';
 
 @Component({
@@ -8,4 +8,5 @@ import { IMovie } from '../../models';
 })
 export class MovieCard {
   public readonly movie = input.required<IMovie>();
+  public readonly onClickMovieCardEvent = output<IMovie>();
 }

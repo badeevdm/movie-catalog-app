@@ -1,5 +1,7 @@
 <section class="movies-list">
-  @for (movie of movies; track $index) {
-  <movie-app-movie-card class="movie-item" [movie]="movie" />
-  }
+  <movie-app-category-section
+    [categories]="categories"
+    [movies]="movies"
+    (onSelectMovieEvent)="openMovieDialog($event)"
+  ></movie-app-category-section>
 </section>

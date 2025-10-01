@@ -1,8 +1,10 @@
 export interface IMovie {
-  id: string;
+  id: number;
   title: string;
-  image: string;
+  poster: string;
   year: number;
   country: string;
-  description: string;
+  description?: string;
+  categoryIds: number[];
+  duration: string;
 }

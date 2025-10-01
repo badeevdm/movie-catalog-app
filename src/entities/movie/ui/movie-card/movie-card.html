@@ -1,11 +1,9 @@
 @let _movie = movie();
 
-<div class="movie-card">
-  <a href="/">
-    <picture class="movie-card__poster">
-      <img [src]="'assets/poster.jpg'" [alt]="_movie.title" loading="lazy" decoding="async" />
-    </picture>
-  </a>
+<div class="movie-card" (click)="onClickMovieCardEvent.emit(_movie)">
+  <picture class="movie-card__poster">
+    <img [src]="_movie.poster" [alt]="_movie.title" loading="lazy" decoding="async" />
+  </picture>
 
   <div class="movie-card__overlay">
     <h3 class="movie-card__title" [title]="_movie.title">{{ _movie.title }}</h3>

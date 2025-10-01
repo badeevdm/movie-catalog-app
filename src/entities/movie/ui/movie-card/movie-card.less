@@ -2,8 +2,9 @@
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  transition: transform 0.18s ease;
   will-change: transform;
+  cursor: pointer;
 }
 
 .movie-card:hover,
@@ -14,7 +15,7 @@
 .movie-card__poster {
   position: relative;
   display: block;
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 3 / 2;
   background: #0b1220;
 }
 
@@ -26,7 +27,6 @@
   object-fit: cover;
   object-position: center;
   display: block;
-  pointer-events: none;
 }
 
 .movie-card__overlay {
@@ -36,17 +36,20 @@
   bottom: 0;
   padding: 12px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
-  transform: translateY(8px);
+  transform: translateY(12px);
   opacity: 0;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
 }
 
 .movie-card:hover .movie-card__overlay,
 .movie-card:focus-within .movie-card__overlay {
   opacity: 1;
   transform: translateY(0);
-  pointer-events: all;
 }
 
 .movie-card__title {
@@ -55,8 +58,6 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   display: block;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   max-width: 100%;
+  margin-right: 24px;
 }
