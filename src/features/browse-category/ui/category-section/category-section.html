@@ -1,26 +1,16 @@
-@let _categories = categories();
-@let _movies = movies();
-
-@defer (on viewport) {
-  @for (category of _categories; track $index) {
-    <section class="category">
-      <div class="category-container">
-        <div class="header">
-          <movie-app-category-chip [category]="category"></movie-app-category-chip>
-        </div>
-        <div class="grid">
-          @for (movie of _movies; track $index) {
-            <movie-app-movie-card
-              [movie]="movie"
-              (onClickMovieCardEvent)="onSelectMovieEvent.emit($event)"
-            ></movie-app-movie-card>
-          }
-        </div>
-      </div>
-    </section>
-  }
-} @placeholder {
-  <div class="loader">
-    <tui-loader />
+<section class="category">
+  <div class="category__chip">
+    <movie-app-category-chip
+      [categoryIds]="[category().id]"
+      [appearance]="'accent'"
+    ></movie-app-category-chip>
   </div>
-}
+  <div class="category__grid">
+    @for (movie of movies(); track $index) {
+      <movie-app-movie-card
+        [movie]="movie"
+        (onClickMovieCardEvent)="onSelectMovieEvent.emit($event)"
+      ></movie-app-movie-card>
+    }
+  </div>
+</section>

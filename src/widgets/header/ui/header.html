@@ -1,4 +1,4 @@
-<header tuiHeader>
+<header tuiHeader class="header" hideOnScroll>
   <hgroup tuiTitle class="logo">
     <h5><a routerLink="/">MovieApp</a></h5>
   </hgroup>
@@ -12,14 +12,14 @@
       >
         <input #input placeholder="Введите название фильма" tuiTextfield [(ngModel)]="search" />
       </tui-textfield>
-      @if(!isVisible) {
-      <button tuiButton appearance="accent" tuiButton type="button" (click)="onSearch(input)">
-        <tui-icon icon="@tui.search" />
-      </button>
+      @if (!isVisible) {
+        <button tuiButton appearance="accent" tuiButton type="button" (click)="onSearch(input)">
+          <tui-icon icon="@tui.search" />
+        </button>
       } @else {
-      <button tuiButton appearance="icon" tuiButton type="button" (click)="onCancelSearch()">
-        <tui-icon icon="@tui.x" />
-      </button>
+        <button tuiButton appearance="icon" tuiButton type="button" (click)="onCancelSearch()">
+          <tui-icon icon="@tui.x" />
+        </button>
       }
     </section>
   </aside>

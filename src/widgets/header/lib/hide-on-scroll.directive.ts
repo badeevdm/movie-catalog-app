@@ -5,7 +5,7 @@ import { throttleTime } from 'rxjs/operators';
 import { DOCUMENT } from '@angular/common';
 
 @Directive({
-  selector: '[appHideOnScroll]',
+  selector: '[hideOnScroll]',
   standalone: true,
 })
 export class HideOnScrollDirective implements OnInit {

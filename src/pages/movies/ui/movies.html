@@ -1,0 +1,15 @@
+@defer (on viewport) {
+  @for (category of categories(); track $index) {
+    @let categoryMovies = movies() | getMoviesByCategory: category.id;
+
+    <movie-app-category-section
+      [category]="category"
+      [movies]="categoryMovies"
+      (onSelectMovieEvent)="openMovieDialog($event)"
+    ></movie-app-category-section>
+  }
+} @placeholder {
+  <div class="loader">
+    <tui-loader />
+  </div>
+}

@@ -1,15 +1,10 @@
-@let movie = movieDialogContext.movie;
-@let categories = movieDialogContext.categories;
-
 <section class="movie-dialog">
   <picture class="movie-dialog__poster">
     <img [src]="movie.poster" [alt]="movie.title" loading="lazy" decoding="async" />
   </picture>
 
   <div class="movie-dialog__content">
-    <div class="title-row">
-      <h1 class="movie-dialog__title">{{ movie.title }}</h1>
-    </div>
+    <h1 class="title">{{ movie.title }}</h1>
 
     <div class="meta">
       <span>{{ movie.year }}</span>
@@ -17,15 +12,7 @@
       <span class="dot">{{ movie.duration }}</span>
     </div>
 
-    <div class="categories">
-      @let movieCategories = movie.categoryIds | getCategories: categories;
-
-      @for (category of movieCategories; track $index) {
-        <tui-chip class="chip">
-          {{ category.name }}
-        </tui-chip>
-      }
-    </div>
+    <movie-app-category-chip [categoryIds]="movie.categoryIds"></movie-app-category-chip>
 
     <p class="description">
       {{ movie.description }}

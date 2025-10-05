@@ -1,5 +1,7 @@
-@let _category = category();
+@let categories = categoryIds() | getCategories: allCategories();
 
-<tui-chip class="chip" appearance="accent">
-  {{ _category.name }}
-</tui-chip>
+@for (category of categories; track $index) {
+  <tui-chip class="chip" [appearance]="appearance()">
+    {{ category.name }}
+  </tui-chip>
+}

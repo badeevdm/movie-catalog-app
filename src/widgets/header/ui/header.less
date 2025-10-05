@@ -1,13 +1,32 @@
-:host {
+.header {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   padding: 24px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.005) 0%,
+    rgba(0, 0, 0, 0.2) 25%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.8) 75%,
+    rgb(0, 0, 0) 100%
+  );
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: transform 0.3s ease;
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
 }
 
-.logo a {
-  color: inherit;
-  text-decoration: none;
+.logo {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .search-container {

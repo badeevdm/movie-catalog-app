@@ -1,0 +1,159 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "title": "Рейд",
+      "year": "2011",
+      "poster": "/assets/poster.jpg",
+      "country": "USA",
+      "categoryIds": ["1"],
+      "duration": "1ч 30м",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": "2",
+      "title": "Безумный Макс: Дорога ярости",
+      "year": "2015",
+      "poster": "/assets/poster.jpg",
+      "country": "USA",
+      "categoryIds": ["1"],
+      "duration": "1ч 30м",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": "3",
+      "title": "Интерстеллар",
+      "year": "2014",
+      "poster": "/assets/poster.jpg",
+      "country": "USA/UK",
+      "categoryIds": ["2", "3"],
+      "duration": "2ч 49м",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": "4",
+      "title": "Джон Уик",
+      "year": "2014",
+      "poster": "/assets/poster.jpg",
+      "country": "USA",
+      "categoryIds": ["1", "3"],
+      "duration": "1ч 41м",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": "5",
+      "title": "Бегущий по лезвию 2049",
+      "year": "2017",
+      "poster": "/assets/poster.jpg",
+      "country": "USA",
+      "categoryIds": ["3", "2"],
+      "duration": "2ч 44м",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": "6",
+      "title": "Терминатор 2: Судный день",
+      "year": "1991",
+      "poster": "/assets/poster.jpg",
+      "country": "USA",
+      "categoryIds": ["1", "2"],
+      "duration": "2ч 17м",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": "7",
+      "title": "Чужой",
+      "year": "1979",
+      "poster": "/assets/poster.jpg",
+      "country": "USA/UK",
+      "categoryIds": ["2", "3"],
+      "duration": "1ч 57м",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": "8",
+      "title": "Тёмный рыцарь",
+      "year": "2008",
+      "poster": "/assets/poster.jpg",
+      "country": "USA/UK",
+      "categoryIds": ["3", "1"],
+      "duration": "2ч 32м",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": "9",
+      "title": "Матрица",
+      "year": "1999",
+      "poster": "/assets/poster.jpg",
+      "country": "USA",
+      "categoryIds": ["1", "2"],
+      "duration": "2ч 16м",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": "10",
+      "title": "Дюна",
+      "year": "2021",
+      "poster": "/assets/poster.jpg",
+      "country": "USA",
+      "categoryIds": ["2"],
+      "duration": "2ч 35м",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": "11",
+      "title": "Миссия невыполнима: Протокол Фантом",
+      "year": "2011",
+      "poster": "/assets/poster.jpg",
+      "country": "USA",
+      "categoryIds": ["3", "1"],
+      "duration": "2ч 13м",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": "12",
+      "title": "Пятый элемент",
+      "year": "1997",
+      "poster": "/assets/poster.jpg",
+      "country": "France",
+      "categoryIds": ["2"],
+      "duration": "2ч 6м",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": "13",
+      "title": "Хищник",
+      "year": "1987",
+      "poster": "/assets/poster.jpg",
+      "country": "USA",
+      "categoryIds": ["3", "1"],
+      "duration": "1ч 47м",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": "14",
+      "title": "Грань будущего",
+      "year": "2014",
+      "poster": "/assets/poster.jpg",
+      "country": "USA",
+      "categoryIds": ["1", "2"],
+      "duration": "1ч 53м",
+      "description": "Lorem ipsum"
+    },
+    {
+      "id": "15",
+      "title": "Бегущий человек",
+      "year": "1987",
+      "poster": "/assets/poster.jpg",
+      "country": "USA",
+      "categoryIds": ["1", "2"],
+      "duration": "1ч 41м",
+      "description": "Lorem ipsum"
+    }
+  ],
+  "categories": [
+    { "id": "1", "name": "Боевик" },
+    { "id": "2", "name": "Фантастика" },
+    { "id": "3", "name": "Триллер" }
+  ]
+}

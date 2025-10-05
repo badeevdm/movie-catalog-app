@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterModule } from '@angular/router';
-import { TuiButton, TuiIcon, TuiLink, TuiTextfield, TuiTitle } from '@taiga-ui/core';
+import { TuiButton, TuiIcon, TuiTextfield, TuiTitle } from '@taiga-ui/core';
 import { TuiHeader } from '@taiga-ui/layout';
+import { HideOnScrollDirective } from '../lib';
 
 @Component({
   selector: 'movie-app-header',
@@ -15,6 +16,7 @@ import { TuiHeader } from '@taiga-ui/layout';
     TuiIcon,
     RouterLink,
     RouterModule,
+    HideOnScrollDirective,
   ],
   templateUrl: './header.html',
   styleUrl: './header.less',
