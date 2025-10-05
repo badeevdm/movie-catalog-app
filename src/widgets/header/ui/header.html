@@ -3,24 +3,6 @@
     <h5><a routerLink="/">MovieApp</a></h5>
   </hgroup>
   <aside tuiAccessories>
-    <section class="search-container">
-      <tui-textfield
-        iconStart="@tui.search"
-        class="search-container__search-query"
-        [class.search-container__search-query_visible]="isVisible"
-        tuiTextfieldSize="s"
-      >
-        <input #input placeholder="Введите название фильма" tuiTextfield [(ngModel)]="search" />
-      </tui-textfield>
-      @if (!isVisible) {
-        <button tuiButton appearance="accent" tuiButton type="button" (click)="onSearch(input)">
-          <tui-icon icon="@tui.search" />
-        </button>
-      } @else {
-        <button tuiButton appearance="icon" tuiButton type="button" (click)="onCancelSearch()">
-          <tui-icon icon="@tui.x" />
-        </button>
-      }
-    </section>
+    <app-search-bar />
   </aside>
 </header>

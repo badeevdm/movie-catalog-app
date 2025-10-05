@@ -4,6 +4,7 @@ import { RouterLink, RouterModule } from '@angular/router';
 import { TuiButton, TuiIcon, TuiTextfield, TuiTitle } from '@taiga-ui/core';
 import { TuiHeader } from '@taiga-ui/layout';
 import { HideOnScrollDirective } from '../lib';
+import { SearchBar } from '../../../features/search/ui/search-bar/search-bar';
 
 @Component({
   selector: 'movie-app-header',
@@ -17,6 +18,7 @@ import { HideOnScrollDirective } from '../lib';
     RouterLink,
     RouterModule,
     HideOnScrollDirective,
+    SearchBar,
   ],
   templateUrl: './header.html',
   styleUrl: './header.less',

@@ -1,0 +1,33 @@
+<div class="search-bar">
+  <tui-textfield
+    iconStart="@tui.search"
+    class="search-query"
+    [class.search-query_visible]="isVisible"
+    tuiTextfieldSize="s"
+  >
+    <input
+      #input
+      placeholder="Введите название фильма"
+      tuiTextfield
+      [ngModel]="search"
+      (ngModelChange)="onInputSearch()"
+    />
+  </tui-textfield>
+  @if (!isVisible) {
+    <button tuiButton appearance="accent" tuiButton type="button" (click)="onSearch(input)">
+      <tui-icon icon="@tui.search" />
+    </button>
+  } @else {
+    <button tuiButton appearance="icon" tuiButton type="button" (click)="onCancelSearch()">
+      <tui-icon icon="@tui.x" />
+    </button>
+  }
+
+  @if (isOpen()) {
+    <div class="search-popover">
+      <ul class="search-list">
+        <li>123</li>
+      </ul>
+    </div>
+  }
+</div>
