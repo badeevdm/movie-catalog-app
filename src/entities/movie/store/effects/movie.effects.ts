@@ -12,19 +12,18 @@ export class MovieEffects {
   loadMovies$ = createEffect(() =>
     this.actions$.pipe(
       ofType(MovieActions.loadMovies),
-      switchMap(() =>
-        this.api.list().pipe(
-          map((items) => MovieActions.loadMoviesSuccess({ items })),
-          catchError((error) => of(MovieActions.loadMoviesFailure({ error }))),
-        ),
-      ),
+      switchMap(() => this.api.list()),
+      map((items) => MovieActions.loadMoviesSuccess({ items })),
+      catchError((error) => of(MovieActions.loadMoviesFailure({ error }))),
     ),
   );
 
-  showErrorIfLoadMoviesFailure$ = createEffect(() =>
-    this.actions$.pipe(
-      ofType(MovieActions.loadMoviesFailure),
-      tap((error) => console.error('loadMoviesFailure error=', error)),
-    ),
+  showErrorIfLoadMoviesFailure$ = createEffect(
+    () =>
+      this.actions$.pipe(
+        ofType(MovieActions.loadMoviesFailure),
+        tap((error) => console.error('loadMoviesFailure error=', error)),
+      ),
+    { dispatch: false },
   );
 }

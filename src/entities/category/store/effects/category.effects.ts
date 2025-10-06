@@ -12,19 +12,18 @@ export class CategoryEffects {
   loadMovies$ = createEffect(() =>
     this.actions$.pipe(
       ofType(CategoryActions.loadCategories),
-      switchMap(() =>
-        this.api.list().pipe(
-          map((items) => CategoryActions.loadCategoriesSuccess({ items })),
-          catchError((error) => of(CategoryActions.loadCategoriesFailure({ error }))),
-        ),
-      ),
+      switchMap(() => this.api.list()),
+      map((items) => CategoryActions.loadCategoriesSuccess({ items })),
+      catchError((error) => of(CategoryActions.loadCategoriesFailure({ error }))),
     ),
   );
 
-  showErrorIfLoadCategoriesFailure$ = createEffect(() =>
-    this.actions$.pipe(
-      ofType(CategoryActions.loadCategoriesFailure),
-      tap((error) => console.error('loadCategoriesFailure error=', error)),
-    ),
+  showErrorIfLoadCategoriesFailure$ = createEffect(
+    () =>
+      this.actions$.pipe(
+        ofType(CategoryActions.loadCategoriesFailure),
+        tap((error) => console.error('loadCategoriesFailure error=', error)),
+      ),
+    { dispatch: false },
   );
 }

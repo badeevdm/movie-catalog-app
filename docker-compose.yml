@@ -1,0 +1,16 @@
+services:
+  json-server:
+    build:
+      context: .
+      dockerfile: ./mock/Dockerfile
+    volumes:
+      - ./mock/db.json:/server/db.json
+
+  angular-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - json-server
