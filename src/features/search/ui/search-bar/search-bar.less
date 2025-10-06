@@ -25,5 +25,76 @@
   top: calc(100% + 6px);
   border-radius: 16px;
   max-height: 280px;
-  overflow: auto;
+  background: white;
+  color: black;
+  transform: translateX(100%);
+  opacity: 0;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+
+  &_open {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.search-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+
+  li {
+    padding: 12px 16px;
+    margin: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #f5f5f5;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: #f8f9fa;
+    }
+  }
+
+  &:empty::before {
+    content: 'Ничего не найдено';
+    display: block;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-button {
+    display: none;
+  }
+
+  .search-query {
+    width: 200px;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .search-popover {
+    left: -100px;
+  }
+
+  .search-list {
+    &:empty::before {
+      padding: 10px;
+      font-size: 16px;
+    }
+    padding: 10px;
+    font-size: 16px;
+  }
 }

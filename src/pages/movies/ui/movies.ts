@@ -7,10 +7,11 @@ import { CategoryFacade } from '../../../entities/category/store/category-facade
 import { MovieFacade } from '../../../entities/movie/store/movie-facade.service';
 import { IMovie, MovieDialog } from '../../../entities/movie';
 import { CategorySection } from '../../../features/browse-category/ui';
+import { Header } from '../../../widgets/header';
 
 @Component({
   selector: 'movie-app-movies',
-  imports: [CategorySection, GetMoviesByCategoryPipe, TuiLoader],
+  imports: [CategorySection, GetMoviesByCategoryPipe, TuiLoader, Header],
   templateUrl: './movies.html',
   styleUrl: './movies.less',
 })

@@ -9,12 +9,19 @@
       #input
       placeholder="Введите название фильма"
       tuiTextfield
-      [ngModel]="search"
-      (ngModelChange)="onInputSearch()"
+      [ngModel]="search()"
+      (ngModelChange)="onInputSearch($event)"
     />
   </tui-textfield>
   @if (!isVisible) {
-    <button tuiButton appearance="accent" tuiButton type="button" (click)="onSearch(input)">
+    <button
+      class="search-button"
+      tuiButton
+      appearance="accent"
+      tuiButton
+      type="button"
+      (click)="onSearch(input)"
+    >
       <tui-icon icon="@tui.search" />
     </button>
   } @else {
@@ -23,11 +30,11 @@
     </button>
   }
 
-  @if (isOpen()) {
-    <div class="search-popover">
-      <ul class="search-list">
-        <li>123</li>
-      </ul>
-    </div>
-  }
+  <div class="search-popover" [class.search-popover_open]="isOpenResults()">
+    <ul class="search-list">
+      @for (movie of results(); track $index) {
+        <li (click)="openMovieDialog(movie)">{{ movie.title }}</li>
+      }
+    </ul>
+  </div>
 </div>
